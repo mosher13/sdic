@@ -1,0 +1,109 @@
+// Bootstrap variables
+// override default bootstrap colors for accessibility
+$color-white: #fff !default;
+$color-black: #000 !default;
+$color-gray-700: #495057 !default;
+
+$color-blue: #0056b3 !default;
+$color-cyan: #006170 !default;
+$color-pink: #e21181 !default;
+$color-green: #008a00 !default;
+$color-dark-green: #243e26 !default;
+
+$breadcrumb-divider-color: $color-gray-700 !default;
+$breadcrumb-active-color: $color-gray-700 !default;
+
+$navbar-light-color: rgba($color-black, .6) !default;
+$navbar-dark-color: rgba($color-white, .6) !default;
+
+$form-text-margin-top: 0 !default;
+
+
+// Theme variables.
+$navbar-brand-image-height: 36px !default;
+$navbar-brand-image-height-lg: 60px !default;
+$navbar-brand-image-width: auto !default;
+$navbar-brand-image-margin: 0 1rem 0 0 !default;
+
+$navbar-brand-site-title-text-transform: uppercase !default;
+$navbar-brand-site-title-font-size: 1.5rem !default;
+$navbar-brand-site-title-font-weight: bold !default;
+$navbar-brand-site-title-letter-spacing: 2px !default;
+
+$region-padding: 0 .5rem !default;
+
+$footer-padding: 2rem 0 !default;
+
+$nav-tabs-link-active-bg-sm: #dee2e6 !default;
+
+$local-tasks-primary-margin: 1rem 0 !default;
+$local-tasks-secondary-margin: 0 0 1rem 0 !default;
+
+
+// SDIC Variables
+$color-ScoutingWarmGray: #515354;
+$color-ScoutingTan: #D6CEBD;
+$color-ScoutingBlue: #003F87;
+$color-ScoutingRed: #CE1126;
+$color-Primary: #007bff;
+$color-Secondary: #6c757d;
+$color-Disable: #58aaff;
+$color-PrimaryHover: #0069d9;
+$color-SuccessHover: #218838;
+$color-Info: #17a2b8;
+
+// Borders
+$border-radius-default: 1.5rem;
+$border-radius-circle: 50%;
+$border-radius-tight: 0.5rem;
+$border-radius-btn: 0.2rem;
+$border-width-thin: 0.0625rem;
+$border-width-medium: 0.125rem;
+$border-width-thick: 0.1875rem;
+$border-width-x-thick: 0.375rem;
+$border-width-xx-thick: 0.4375rem;
+$border-color: $color-Secondary;
+$border-color-dark: $color-ScoutingWarmGray;
+$content-max-width: 75em;
+$content-line-length: 75ch; // 75 characters max per line
+$header-height: 6.5rem;
+$reset-inherit: inherit;
+$reset-transparent: transparent;
+
+// Breakpoints
+$mq-x-small: 18.75rem; // 300px
+$mq-small: 20em; // 320px
+$mq-small-2: 25em; // 400px
+$mq-small-med-3: 35em; // 560px
+$mq-small-3: 40em; // 640px
+$mq-medium: 47em; // 752px
+$mq-medium-2: 50em; // 800px
+$mq-medium-3: 60em; // 960px
+$mq-large: 64em; // 1024px
+$mq-large-2: 73em; // 1168px
+$mq-large-3: 90em; // 1440px
+
+// Stacking
+$z-index-default: 1;
+$z-index-bump: 10;
+$z-index-sticky: 100;
+$z-index-popup: 5000;
+$z-index-overlay: 8000;
+
+// Borders
+$border-radius-default: 1.5rem;
+$border-radius-circle: 50%;
+$border-radius-tight: 0.5rem;
+$border-radius-button: 0.25rem;
+$border-radius-full: 2rem;
+$border-radius-fullest: 4rem;
+$border-width-thin: 0.0625rem;
+$border-width-medium: 0.125rem;
+$border-width-thick: 0.1875rem;
+$border-width-x-thick: 0.375rem;
+
+// Animation
+$duration-instantly: 0s;
+$duration-immediately: 0.05s;
+$duration-promptly: 0.25s;
+$duration-slowly: 0.5s;

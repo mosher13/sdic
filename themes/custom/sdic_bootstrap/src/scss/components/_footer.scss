@@ -1,0 +1,36 @@
+footer {
+  margin-top: 1rem;
+  padding: 0;
+  background-color: $color-ScoutingRed;
+  color: $color-white;
+
+  a {
+    color: $color-white;
+  }
+
+  .region-footer {
+    display: flex;
+
+    @include bp($mq-medium-2) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .text-formatted {
+    padding: 0.5rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.menu--footer {
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+}

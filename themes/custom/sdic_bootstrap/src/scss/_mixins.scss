@@ -1,0 +1,103 @@
+@mixin b4-make-link(
+  $a-link-color: $link-color,
+  $a-link-decoration: $link-decoration,
+  $a-link-hover-color: $link-hover-color,
+  $a-link-hover-decoration: $link-hover-decoration,
+  $target-class: '') {
+  a#{$target-class} {
+    color: $a-link-color;
+    text-decoration: $a-link-decoration;
+
+    @include hover {
+      color: $a-link-hover-color;
+      text-decoration: $a-link-hover-decoration;
+    }
+  }
+}
+
+// set media breakpoints
+
+@mixin bp($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin bp-max($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin bp-bw($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin bph($size) {
+  @media screen and (min-height: $size) {
+    @content;
+  }
+}
+
+@mixin bph-max($size) {
+  @media screen and (max-height: $size) {
+    @content;
+  }
+}
+
+@mixin bph-bw($min, $max) {
+  @media screen and (min-height: $min) and (max-height: $max) {
+    @content;
+  }
+}
+
+// Gradients
+
+@mixin gradient(
+  $from,
+  $to,
+  $fallback: $from,
+  $bottom-position: 100%,
+  $top-position: 0%
+) {
+  // fallback/image non-cover color
+  background-color: $fallback;
+  background-image: linear-gradient(
+          to bottom,
+          $from $top-position,
+          $to $bottom-position
+  );
+}
+
+// stylelint-disable at-rule-no-unknown
+
+@mixin hc($mode: "active") {
+  @if $mode == "active" {
+    @media (-ms-high-contrast: active), (forced-colors: active) {
+      @content;
+    }
+  }
+
+  @if $mode == "dark" {
+    @media (-ms-high-contrast: white-on-black),
+    (forced-colors: active) and (prefers-color-scheme: dark) {
+      @content;
+    }
+  }
+
+  @if $mode == "light" {
+    @media (-ms-high-contrast: black-on-white),
+    (forced-colors: active) and (prefers-color-scheme: light) {
+      @content;
+    }
+  }
+}
+// stylelint-enable at-rule-no-unknown
+
+@mixin rm() {
+  @media screen and (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

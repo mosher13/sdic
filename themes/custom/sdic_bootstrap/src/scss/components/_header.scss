@@ -1,0 +1,152 @@
+.region-header {
+  background-color: $color-ScoutingRed;
+  color: $color-white;
+  text-align: right;
+
+  padding: 0.5rem 1rem 0.001rem;
+
+  p {
+    margin-bottom: .5rem;
+  }
+}
+
+@include bp(62rem){
+  .navbar-nav {
+    flex-wrap: wrap;
+  }
+
+  .dropdown:hover .dropdown-menu {
+
+    display: block;
+    margin-top: 0;
+
+    .dropdown-menu {
+      display: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      z-index: 1000;
+      top: -23px;
+      left: -240px;
+
+    }
+  }
+}
+
+.navbar-toggler.collapsed {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: #fff;
+  font-weight: 400;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  float: right;
+
+  @include bp(62rem){
+    display: none;
+  }
+
+  .hamburger {
+    position: relative;
+    margin-left: 0.25rem;
+    width: 2rem;
+    height: 1.25rem;
+    transform: rotate(0);
+    transition: all ease 0.2s;
+  }
+
+  .patty {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0.25rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    transition: all ease 0.2s;
+
+    &.first {
+      top: 0;
+    }
+
+    &.second {
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+
+    &.third {
+      bottom: 0;
+    }
+  }
+
+  .label {
+    margin-bottom: -0.25rem;
+    padding-right: 0.5rem;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  &:focus,
+  &:hover {
+    .label {
+      color: #fff;
+    }
+  }
+}
+
+.navbar-toggler:not(.collapsed) {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: #fff;
+  font-weight: 500;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  float: right;
+
+  .hamburger {
+    position: relative;
+    margin-left: 0.25rem;
+    width: 2rem;
+    height: 1.25rem;
+    transform: rotate(180deg);
+    transition: all ease 0.2s;
+  }
+
+  .patty {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0.25rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    transition: all ease 0.2s;
+
+    &.first {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &.second {
+      left: 50%;
+      width: 0;
+      opacity: 0;
+    }
+
+    &.third {
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+}

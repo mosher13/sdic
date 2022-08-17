@@ -1,0 +1,31 @@
+header {
+  .navbar {
+    background-color: $ScoutingBlue;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: $ScoutingBlue;
+    width: 240px;
+    border: none;
+    border-radius: none;
+
+    li {
+      padding: 0 20px;
+      margin: 0;
+
+      a {
+        padding: 6px 20px;
+        width: 200px;
+      }
+    }
+  }
+}
+
+.join-scouting {
+  padding: 10px;
+  background-color: $SuccessHover;
+}

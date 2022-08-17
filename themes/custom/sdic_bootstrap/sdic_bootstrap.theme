@@ -1,0 +1,87 @@
+<?php
+
+/**
+ * @file
+ * SDIC Bootstrap4 theme file.
+ */
+
+use Drupal\Component\Utility\Html;
+
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function sdic_bootstrap_preprocess_html(&$variables) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  // Check if the node has the field and the field has a value.
+  if ($node && $node->hasField('field_scout_camp') && !$node->get('field_scout_camp')->isEmpty()) {
+
+    // Get the value of the field.
+    $scout_camp_value = $node->field_scout_camp->value;
+
+    // Convert the field value to a safe class name.
+    $scout_camp_class_name = strtolower(Html::cleanCssIdentifier($scout_camp_value));
+
+    // Add the class to the entity as an attribute.
+    $variables['attributes']['class'][] = $scout_camp_class_name;
+  }
+
+}
+
+/**
+ * implement hook_theme_suggestions
+ */
+function sdic_bootstrap_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+
+    $suggestions[] = 'html__' . $node->bundle();
+
+  }
+
+}
+
+/**
+ * implement hook_theme_suggestions_page_alter().
+ */
+function sdic_bootstrap_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+  $path = \Drupal::requestStack()->getCurrentRequest()->getPathInfo();
+
+  if ($path != '/') {
+    $path = trim($path, '/');
+    $arg = str_replace(["/", '-'], ['_', '_'], $path);
+    $suggestions[] = 'page__' . $arg;
+  }
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+
+    $suggestions[] = 'page__' . $node->bundle();
+
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ */
+function sdic_bootstrap_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  return [
+      'views_view__' . $variables['view']->id(),
+  ];
+}
+
+
+/**
+ * Implements hook_theme_suggestions_taxonomy_term_alter().
+ */
+function sdic_bootstrap_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables) {
+  /** @var \Drupal\taxonomy\TermInterface $term */
+  $term = $variables['elements']['#taxonomy_term'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+  // Add view mode theme suggestions.
+  $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'taxonomy_term__' . $term->id() . '__' . $sanitized_view_mode;
+}

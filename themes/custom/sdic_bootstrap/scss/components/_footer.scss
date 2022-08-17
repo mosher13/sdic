@@ -1,0 +1,29 @@
+footer {
+  margin-top: 1rem;
+  padding: 0;
+  background-color: $ScoutingRed;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  .region-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .text-formatted {
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+.menu--footer {
+  margin-left: 1rem;
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+}

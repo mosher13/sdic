@@ -1,0 +1,544 @@
+.node__content {
+  margin: 0 1rem;
+
+  @include bp($mq-medium-3) {
+    margin: 0 1rem 0 0;
+  }
+}
+
+iframe.calendar, object.calendar {
+  border-width: 0;
+  height: 600px;
+  width: 100%;
+}
+
+.paragraph--type--bp-accordion {
+  .card {
+    border: none;
+
+    &-header {
+      border: 1px solid rgba(0,0,0,0.125);
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .panel-title {
+    position: relative;
+  }
+
+  .panel-heading {
+    [aria-expanded='false']:before {
+      font-family: bootstrap-icons !important;
+      content: "\f4fa";
+      position: absolute;
+      right: 0;
+      font-size: 16px;
+      color: #777;
+      top: 50%;
+      margin-top: -0.5em;
+    }
+
+    [aria-expanded='true']:before {
+      font-family: bootstrap-icons !important;
+      content: "\f2e6";
+      position: absolute;
+      right: 0;
+      font-size: 16px;
+      color: #777;
+      top: 50%;
+      margin-top: -0.5em;
+    }
+  }
+}
+
+.paragraph--type--section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+// Spacers
+.height--xs {
+  margin-top: 0.5rem;
+}
+
+.height--s {
+  margin-top: 1rem;
+}
+
+.height--m {
+  margin-top: 2rem;
+}
+
+.height--l {
+  margin-top: 3rem;
+}
+
+.height--xl {
+  margin-top: 4rem;
+}
+
+.height--xxl {
+  margin-top: 5rem;
+}
+
+.height--xxxl {
+  margin-top: 6rem;
+}
+
+.height--xxxxl {
+  margin-top: 8rem;
+}
+
+.height--xxxxxl {
+  margin-top: 10rem;
+}
+
+// Call-outs
+.paragraph.paragraph--type--bp-callout {
+  margin: 1rem auto;
+  display: block;
+
+  .callout-header {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
+
+.callout-style--primary {
+  border: 2px solid #007bff;
+  background-image: linear-gradient(180deg,rgba(0, 123, 255,0.6) 0%,rgba(0, 123, 255,0.6) 100%);
+  color: #fff;
+}
+
+.callout-style--primary .callout-header {
+  background: transparent;
+  color: #fff;
+}
+
+.callout-style--secondary {
+  border: 2px solid #6c757d;
+  background-image: linear-gradient(180deg,rgba(108, 117, 125,0.6) 0%,rgba(108, 117, 125,0.6) 100%);
+  color: #fff;
+}
+
+.callout-style--secondary .callout-header {
+  background: transparent;
+  color: #fff;
+}
+
+.callout-style--success {
+  border: 2px solid #28a745;
+  background-image: linear-gradient(180deg,rgba(40, 167, 69,0.6) 0%,rgba(40, 167, 69,0.6) 100%);
+  color: #fff;
+}
+
+.callout-style--success .callout-header {
+  background: transparent;
+  color: #fff;
+}
+
+.callout-style--danger {
+  border: 2px solid #dc3545;
+  background-image: linear-gradient(180deg,rgba(220, 53, 69,0.6) 0%,rgba(220, 53, 69,0.6) 100%);
+  color: #fff;
+}
+
+.callout-style--danger .callout-header {
+  background: transparent;
+  color: #fff;
+}
+
+.callout-style--warning {
+  border: 2px solid #ffc107;
+  background-image: linear-gradient(180deg,rgba(255, 193, 7,0.6) 0%,rgba(255, 193, 7,0.6) 100%);
+}
+
+.callout-style--warning .callout-header {
+  background: transparent;
+}
+
+.callout-style--info {
+  border: 2px solid #17a2b8;
+  background-image: linear-gradient(180deg,rgba(23, 162, 184,0.6) 0%,rgba(23, 162, 184,0.6) 100%);
+  color: #fff;
+}
+
+.callout-style--info .callout-header {
+  background: transparent;
+  color: #fff;
+}
+
+.callout-style--dark {
+  border: 2px solid #343a40;
+  background-image: linear-gradient(180deg,rgba(52, 58, 64,0.6) 0%,rgba(52, 58, 64,0.6) 100%);
+  color: #fff;
+}
+
+.callout-style--dark .callout-header {
+  background: transparent;
+  color: #fff;
+}
+
+.callout-style--light {
+  background-image: linear-gradient(180deg,rgba(248, 249, 250,0.6) 0%,rgba(248, 249, 250,0.6) 100%);
+  border: 2px solid #f8f9fa
+}
+
+.callout-style--light .callout-header {
+  background: transparent;
+}
+
+.callout-style--white {
+  background-image: linear-gradient(180deg,rgba(255, 255, 255,0.6) 0%,rgba(255, 255, 255,0.6) 100%);
+  border: 2px solid #fff;
+}
+
+.callout-style--white .callout-header {
+  background: transparent;
+}
+
+// Widths
+.paragraph--width--tiny {
+  width: 50%;
+
+  @include bp($mq-medium-3) {
+    width: 20%;
+  }
+}
+
+.paragraph--width--narrow {
+  width: 75%;
+
+  @include bp($mq-medium-3) {
+    width: 33%;
+  }
+}
+
+.paragraph--width--medium {
+  width: 90%;
+
+  @include bp($mq-medium-3) {
+    width: 50%;
+  }
+}
+
+.paragraph--width--wide {
+  width: 90%;
+
+  @include bp($mq-medium-3) {
+    width: 80%;
+  }
+}
+
+.paragraph--width--full {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
+// Cards
+.paragraph--type--bp-card {
+
+  .card-body {
+    text-align: center;
+  }
+
+  .field--name-bp-card-title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+}
+
+
+/* RGBA Colors from http://mdbootstrap.com/css/colors/#rgba-colors */
+.paragraph--color--rgba-blue-light,
+.paragraph--color--rgba-blue-light.btn {
+  background-color: rgba(3, 169, 244, 0.3);
+}
+
+.paragraph--color--rgba-red-light,
+.paragraph--color--rgba-red-light.btn {
+  background-color: rgba(244, 67, 54, 0.3);
+}
+
+.paragraph--color--rgba-pink-light,
+.paragraph--color--rgba-pink-light.btn {
+  background-color: rgba(233, 30, 99, 0.3);
+}
+
+.paragraph--color--rgba-purple-light,
+.paragraph--color--rgba-purple-light.btn {
+  background-color: rgba(156, 39, 176, 0.3);
+}
+
+.paragraph--color--rgba-indigo-light,
+.paragraph--color--rgba-indigo-light.btn {
+  background-color: rgba(63, 81, 181, 0.3);
+}
+
+.paragraph--color--rgba-cyan-light,
+.paragraph--color--rgba-cyan-light.btn {
+  background-color: rgba(0, 188, 212, 0.3);
+}
+
+.paragraph--color--rgba-teal-light,
+.paragraph--color--rgba-teal-light.btn {
+  background-color: rgba(0, 150, 136, 0.3);
+}
+
+.paragraph--color--rgba-green-light,
+.paragraph--color--rgba-green-light.btn {
+  background-color: rgba(76, 175, 80, 0.3);
+}
+
+.paragraph--color--rgba-lime-light,
+.paragraph--color--rgba-lime-light.btn {
+  background-color: rgba(205, 220, 57, 0.3);
+}
+
+.paragraph--color--rgba-yellow-light,
+.paragraph--color--rgba-yellow-light.btn {
+  background-color: rgba(255, 235, 59, 0.3);
+}
+
+.paragraph--color--rgba-orange-light,
+.paragraph--color--rgba-orange-light.btn {
+  background-color: rgba(255, 152, 0, 0.3);
+}
+
+.paragraph--color--rgba-brown-light,
+.paragraph--color--rgba-brown-light.btn {
+  background-color: rgba(121, 85, 72, 0.3);
+}
+
+.paragraph--color--rgba-grey-light,
+.paragraph--color--rgba-grey-light.btn {
+  background-color: rgba(158, 158, 158, 0.3);
+}
+
+.paragraph--color--rgba-bluegrey-light,
+.paragraph--color--rgba-bluegrey-light.btn {
+  background-color: rgba(96, 125, 139, 0.3);
+}
+
+.paragraph--color--rgba-black-light,
+.paragraph--color--rgba-black-light.btn {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.paragraph--color--rgba-stylish-light,
+.paragraph--color--rgba-stylish-light.btn {
+  background-color: rgba(62, 69, 81, 0.3);
+}
+
+.paragraph--color--rgba-white-light,
+.paragraph--color--rgba-white-light.btn {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.paragraph--color--rgba-blue-strong,
+.paragraph--color--rgba-blue-strong.btn {
+  background-color: rgba(3, 169, 244, 1);
+}
+
+.paragraph--color--rgba-red-strong,
+.paragraph--color--rgba-red-strong.btn {
+  background-color: rgba(244, 67, 54, 1);
+}
+
+.paragraph--color--rgba-pink-strong,
+.paragraph--color--rgba-pink-strong.btn {
+  background-color: rgba(233, 30, 99, 1);
+}
+
+.paragraph--color--rgba-purple-strong,
+.paragraph--color--rgba-purple-strong.btn {
+  background-color: rgba(156, 39, 176, 1);
+}
+
+.paragraph--color--rgba-indigo-strong,
+.paragraph--color--rgba-indigo-strong.btn {
+  background-color: rgba(63, 81, 181, 1);
+}
+
+.paragraph--color--rgba-cyan-strong,
+.paragraph--color--rgba-cyan-strong.btn {
+  background-color: rgba(0, 188, 212, 1);
+}
+
+.paragraph--color--rgba-teal-strong,
+.paragraph--color--rgba-teal-strong.btn {
+  background-color: rgba(0, 150, 136, 1);
+}
+
+.paragraph--color--rgba-green-strong,
+.paragraph--color--rgba-green-strong.btn {
+  background-color: rgba(76, 175, 80, 1);
+}
+
+.paragraph--color--rgba-lime-strong,
+.paragraph--color--rgba-lime-strong.btn {
+  background-color: rgba(205, 220, 57, 1);
+}
+
+.paragraph--color--rgba-yellow-strong,
+.paragraph--color--rgba-yellow-strong.btn {
+  background-color: rgba(255, 235, 59, 1);
+}
+
+.paragraph--color--rgba-orange-strong,
+.paragraph--color--rgba-orange-strong.btn {
+  background-color: rgba(255, 152, 0, 1);
+}
+
+.paragraph--color--rgba-brown-strong,
+.paragraph--color--rgba-brown-strong.btn {
+  background-color: rgba(121, 85, 72, 1);
+}
+
+.paragraph--color--rgba-grey-strong,
+.paragraph--color--rgba-grey-strong.btn {
+  background-color: rgba(158, 158, 158, 1);
+}
+
+.paragraph--color--rgba-bluegrey-strong,
+.paragraph--color--rgba-bluegrey-strong.btn {
+  background-color: rgba(96, 125, 139, 1);
+}
+
+.paragraph--color--rgba-black-strong,
+.paragraph--color--rgba-black-strong.btn {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.paragraph--color--rgba-stylish-strong,
+.paragraph--color--rgba-stylish-strong.btn {
+  background-color: rgba(62, 69, 81, 1);
+}
+
+.paragraph--color--rgba-white-strong,
+.paragraph--color--rgba-white-strong.btn {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.paragraph--color--rgba-blue-slight,
+.paragraph--color--rgba-blue-slight.btn {
+  background-color: rgba(3, 169, 244, 0.1);
+}
+
+.paragraph--color--rgba-red-slight,
+.paragraph--color--rgba-red-sligh.btnt {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.paragraph--color--rgba-pink-slight,
+.paragraph--color--rgba-pink-slight.btn {
+  background-color: rgba(233, 30, 99, 0.1);
+}
+
+.paragraph--color--rgba-purple-slight,
+.paragraph--color--rgba-purple-slight.btn {
+  background-color: rgba(156, 39, 176, 0.1);
+}
+
+.paragraph--color--rgba-indigo-slight,
+.paragraph--color--rgba-indigo-slight.btn {
+  background-color: rgba(63, 81, 181, 0.1);
+}
+
+.paragraph--color--rgba-cyan-slight,
+.paragraph--color--rgba-cyan-slight.btn {
+  background-color: rgba(0, 188, 212, 0.1);
+}
+
+.paragraph--color--rgba-teal-slight,
+.paragraph--color--rgba-teal-slight.btn {
+  background-color: rgba(0, 150, 136, 0.1);
+}
+
+.paragraph--color--rgba-green-slight,
+.paragraph--color--rgba-green-slight.btn {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.paragraph--color--rgba-lime-slight,
+.paragraph--color--rgba-lime-slight.btn {
+  background-color: rgba(205, 220, 57, 0.1);
+}
+
+.paragraph--color--rgba-yellow-slight,
+.paragraph--color--rgba-yellow-slight.btn {
+  background-color: rgba(255, 235, 59, 0.1);
+}
+
+.paragraph--color--rgba-orange-slight,
+.paragraph--color--rgba-orange-slight.btn {
+  background-color: rgba(255, 152, 0, 0.1);
+}
+
+.paragraph--color--rgba-brown-slight,
+.paragraph--color--rgba-brown-slight.btn {
+  background-color: rgba(121, 85, 72, 0.1);
+}
+
+.paragraph--color--rgba-grey-slight,
+.paragraph--color--rgba-grey-slight.btn {
+  background-color: rgba(158, 158, 158, 0.1);
+}
+
+.paragraph--color--rgba-bluegrey-slight,
+.paragraph--color--rgba-bluegrey-slight.btn {
+  background-color: rgba(96, 125, 139, 0.1);
+}
+
+.paragraph--color--rgba-black-slight,
+.paragraph--color--rgba-black-slight.btn {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.paragraph--color--rgba-stylish-slight,
+.paragraph--color--rgba-stylish-slight.btn {
+  background-color: rgba(62, 69, 81, 0.1);
+}
+
+.paragraph--color--rgba-white-slight,
+.paragraph--color--rgba-white-slight.btn {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.paragraph--color--transparent {
+  background-color: transparent;
+}
+
+/* Override these in your site's CSS file for complete customization. */
+.paragraph--color--primary {
+  background-color: $color-Primary;
+}
+
+.paragraph--color--secondary {
+  background-color: $color-Secondary;
+}
+
+.paragraph--color--success {
+  background-color: $color-SuccessHover;
+}
+
+.paragraph--color--info {
+  background-color: $color-Info;
+}
+
+.paragraph--color--warning {
+  background-color: $color-ScoutingTan;
+}
+
+.paragraph--color--danger {
+  background-color: $color-ScoutingRed;
+}
+
+.btn-card {
+  display: block;
+}

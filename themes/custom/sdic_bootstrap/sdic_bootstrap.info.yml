@@ -1,0 +1,21 @@
+name: SDIC Bootstrap Theme
+type: theme
+description: 'Theme for San Diego-Imperial Council, BSA'
+core_version_requirement: ^8.8 | ^9 | ^10
+base theme: bootstrap4
+
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+
+
+libraries:
+  - sdic_bootstrap/global-styling
+  - sdic_bootstrap/global-scripts
