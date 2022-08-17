@@ -47,3 +47,8 @@
 /robots.txt
 /update.php
 /web.config
+.idea/d9-sdic.iml
+.idea/jsLibraryMappings.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
